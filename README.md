@@ -23,12 +23,6 @@ char *aws_mqtt_thing_topic_pub = "Your/MQTT/Topic";
 
 You will also need to edit the `lib/AWS/IOT/src/aws_iot_certficates.c` file based on the certificates you get when setting up a `thing` on the AWS platform.
 
-You can use the following command to create these arrays
-
-```bash
-xxd -i src/certs .pem | sed -e 's/unsigned char .* = {/const char certificate_pem_crt[] = {/g' -e 's/unsigned int .* = .*;//g'
-```
-
 ```cpp
 // Example below, change this and the other two entries to your certificates
 
