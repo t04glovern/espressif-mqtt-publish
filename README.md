@@ -1,4 +1,4 @@
-# AWS IoT - Espressif MQTT Publisher [![Build Status](https://travis-ci.org/t04glovern/espressif-mqtt-publish.svg?branch=master)](https://travis-ci.org/t04glovern/espressif-mqtt-publish)
+# AWS IoT - Espressif X.509 MQTT Publisher [![Build Status](https://travis-ci.org/t04glovern/espressif-mqtt-publish.svg?branch=master)](https://travis-ci.org/t04glovern/espressif-mqtt-publish)
 
 ## Setup
 
@@ -16,8 +16,7 @@ const String thing_id = "YourThingID";
 // AWS MQTT Details
 char *aws_mqtt_server = "YourAWSThingID.iot.ap-southeast-2.amazonaws.com";
 char *aws_mqtt_client_id = "YourMQTTClientID";
-char *aws_mqtt_thing_topic_pub = "YourMQTTAWSIoTThing/YourMQTTTopic";
-char *aws_mqtt_thing_topic_sub = "YourMQTTAWSIoTThing/YourMQTTTopic";
+char *aws_mqtt_thing_topic_pub = "Your/MQTT/Topic";
 
 #endif
 ```
@@ -70,6 +69,11 @@ This project is build and run with PlatformIO. The library dependencies can be f
 platform = espressif32
 board = firebeetle32
 framework = arduino
+monitor_baud = 115200
+
+lib_deps =
+    ArduinoJson@5.13.1
+
 ```
 
 ### lib dependencies
